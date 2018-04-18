@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- TODO find a way to parameterise assembly with ${env} -->
+<assembly>
+ <id>zip</id>
+  <formats>
+    <format>zip</format>
+  </formats>
+  <fileSets>
+    <fileSet>
+      <directory>src/main/resources</directory>
+      <outputDirectory>bin</outputDirectory>
+      <includes>
+        <include>*.txt</include>
+	  <include>*.bat</include>
+	  <include>*.sh</include>
+      </includes>      
+    </fileSet>
+    <fileSet>
+    <directory>src/main/resources</directory>
+    <outputDirectory>probs</outputDirectory>
+    <includes>
+    	<include>*.properties</include>
+    	</includes>
+    </fileSet>
+  </fileSets>
+  <dependencySets>
+    <dependencySet>
+      <includes>
+        <include>*:jar</include>
+      </includes>
+    </dependencySet>
+  </dependencySets>  
+</assembly>
